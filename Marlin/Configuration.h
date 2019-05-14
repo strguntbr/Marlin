@@ -87,7 +87,7 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "ctrlbreak" // Who made the changes. DaHai: Change if you wish - informational only
+#define STRING_CONFIG_H_AUTHOR "ctrlbreak" // Who made the changes
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
 #define STRING_SPLASH_LINE2 "Welcome to ANYCUBIC"         // will be shown during bootup in line 2
@@ -129,11 +129,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#ifdef DAHAI
-  #define BAUDRATE 250000 // DaHai: Gorilla board seems to work better at this baud rate
-#else
-  #define BAUDRATE 115200
-#endif
+#define BAUDRATE 250000 // ctrlbreak: default was 115200
 
 // Enable the Bluetooth serial interface on AT90USB devices
 //#define BLUETOOTH
